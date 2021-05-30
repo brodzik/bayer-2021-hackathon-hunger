@@ -10,7 +10,7 @@ from flask import Flask, abort, redirect, render_template, request, url_for
 
 app = Flask(__name__)
 app.config["MAX_CONTENT_LENGTH"] = 1024 * 1024
-app.config["UPLOAD_EXTENSIONS"] = [".jpg", ".png", ".gif"]
+app.config["UPLOAD_EXTENSIONS"] = [".jpg", ".png", ".gif", ".JPG", ".PNG", ".GIF"]
 app.config["UPLOAD_FOLDER"] = "static/uploads/"
 
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
